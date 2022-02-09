@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.pug --open",
-    "build": "parcel build src/index.pug -d docs --public-url ./",
+    "build": "parcel build src/index.pug --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/taras131/middle.messenger.praktikum.yandex/issues"
   },
-  "homepage": "https://github.com/taras131/middle.messenger.praktikum.yandex#readme"
+  "homepage": "https://github.com/taras131/middle.messenger.praktikum.yandex#readme",
+  "devDependencies": {
+    "cssnano": "^5.0.17",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.6",
+    "pug": "^3.0.2",
+    "sass": "^1.49.7"
+  }
 }
