@@ -1,0 +1,9 @@
+style
+    include settings-item.module.scss
+mixin settingsItem(setting)
+    li.settings-item_wrapper
+        p.settings-item_title=setting.title
+        input(class ="settings-item_input"
+            name = setting.name
+            type="text"
+            value=setting.value)

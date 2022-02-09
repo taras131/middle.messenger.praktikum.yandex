@@ -1,0 +1,10 @@
+style
+    include chat-header.module.scss
+mixin chatHeader(firstName, lastName, avatar)
+    .chat_header_wrapper
+        section.chat_header_info
+            .avatar_container
+                img(src=avatar alt = "avatar" class="avatar")
+            .name= firstName + ' ' + lastName
+        section.chat_header_more
+            img(src='images/more.png')

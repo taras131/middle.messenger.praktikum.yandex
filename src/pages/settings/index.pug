@@ -1,0 +1,27 @@
+include ../../components/settings-item/index
+include ../../components/button/index
+include ../../components/settings-header/index
+-
+    const settings = [{id: 1, name: 'first_name', title: 'Имя', value: 'Филип'},
+        {id: 2, name: 'second_name', title: 'Фамилия', value: 'Фомин'},
+        {id: 3, name: 'display_name', title: 'Ник', value: 'nagibator_3000'},
+        {id: 4, name: 'login', title: 'Логин', value: 'fil'},
+        {id: 5, name: 'email', title: 'Почта', value: 't@mail.ru'},
+        {id: 6, name: 'phone', title: 'Телефон', value: '+7039242523'}]
+doctype html
+html(lang="en")
+    head
+        title pageTitle
+        style
+            include settings.module.scss
+    body
+        .settings_content
+            +settingsHeader("Настройки","/")
+            ul.settings-items
+                each setting in settings
+                    +settingsItem(setting)
+            .settings-buttons
+                a(href='../change-avatar/index.html')
+                    +button("Изменить аватар")
+                a(href='../change-password/index.html')
+                    +button("Изменить пароль")

@@ -1,0 +1,23 @@
+include ../../components/button/index
+
+doctype html
+html(lang="en")
+    head
+        title pageTitle
+        style
+            include ../login/login.module.scss
+    body
+        .login_wrapper
+            .login_content
+                h1.login-title Регистрация
+                input(class="login_input" placeholder="Имя")
+                input(class="login_input" placeholder="Фамилия" type="password")
+                input(class="login_input" placeholder="Телефон" type="password")
+                input(class="login_input" placeholder="Email" type="password")
+                input(class="login_input" placeholder="Логин" type="password")
+                input(class="login_input" placeholder="Пароль" type="password")
+                input(class="login_input" placeholder="Повторите пароль" type="password")
+                a(href='/')
+                    +button("Создать аккаунт", '/', 'button_green')
+                a(href='../login/index.html')
+                    +button("Войти", '../login/index.html')
