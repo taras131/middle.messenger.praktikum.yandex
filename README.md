@@ -15,3 +15,4 @@
 ### npm run build
 
 # Ссылка на pull request
+https://github.com/taras131/middle.messenger.praktikum.yandex/pull/1
