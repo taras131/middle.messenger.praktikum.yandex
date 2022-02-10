@@ -10,7 +10,7 @@ html(lang="en")
         .login_wrapper
             .login_content
                 h1.login-title Вход
-                input(class="login_input" placeholder="Логин")
-                input(class="login_input" placeholder="Пароль" type="password")
+                input(name="login" class="login_input" placeholder="Логин")
+                input(name="password" class="login_input" placeholder="Пароль" type="password")
                 +button("Войти", '/', 'button_green')
                 +button("Создать аккаунт", "../registration/index.html")
