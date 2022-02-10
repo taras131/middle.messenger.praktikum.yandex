@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.pug -p 3000 --open",
-    "build": "parcel build src/index.pug --no-minify",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build src/index.pug --no-minify"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,9 @@
   },
   "homepage": "https://github.com/taras131/middle.messenger.praktikum.yandex#readme",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.2.1",
+    "@parcel/transformer-pug": "^2.2.1",
+    "@parcel/transformer-sass": "^2.2.1",
     "cssnano": "^5.0.17",
     "parcel-bundler": "^1.12.5",
     "postcss": "^8.4.6",

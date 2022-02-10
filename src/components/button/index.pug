@@ -1,6 +1,8 @@
 style
     include button.module.scss
+- let buttonClassName = "button_wrapper"
 mixin button(title, path, color)
-    a(href=path)
-        div(class = "button_wrapper " + color)
-            p.button_title=title
+    -if (color)
+            buttonClassName += ' '+color
+    button(onclick="document.location=" + path class = buttonClassName)
+        p.button_title=title
