@@ -1,25 +1,27 @@
-.chat_message_item_wrapper{
+.chat_message_item_wrapper {
   background-color: #E5E5E5;
   padding: 5px 10px 5px 10px;
   margin-top: 10px;
   border-radius: 5px;
   max-width: 50%;
 }
-.time{
+
+.time {
   text-align: right;
 }
-.text{
+
+.text {
   font-size: 18px;
   line-height: 21px;
-
-
 }
-.my_message{
+
+.my_message {
   background-color: #537AC2;
   color: #FFFFFF;
   margin-left: 50%;
 }
-.read_icon_container{
+
+.read_icon_container {
   width: 100%;
   display: flex;
   justify-content: flex-end;

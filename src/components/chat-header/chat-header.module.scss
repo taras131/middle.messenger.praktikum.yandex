@@ -1,4 +1,4 @@
-.chat_header_wrapper{
+.chat_header_wrapper {
   width: 100%;
   height: 100px;
   background-color: #D47500;
@@ -8,21 +8,25 @@
   justify-content: space-between;
   box-sizing: border-box;
 }
-.chat_header_info{
+
+.chat_header_info {
   display: flex;
   align-items: center;
 }
-.avatar_container{
+
+.avatar_container {
   border-radius: 100%;
   border: 1px solid #FFFFFF;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
-.avatar{
+
+.avatar {
   width: 60px;
   height: 60px;
   border-radius: 100%;
 }
-.name{
+
+.name {
   margin-left: 40px;
   font-weight: 600;
   font-size: 24px;

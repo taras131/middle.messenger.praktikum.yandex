@@ -14,7 +14,7 @@ html(lang="en")
             include ../settings/settings.module.scss
     body
         .settings_content
-            +settingsHeader("Смена пароля",'../settings/index.html')
+            +settingsHeader("Смена пароля","../settings/index.html")
             ul.settings-items
                 each setting in settings
                     +settingsItem(setting)

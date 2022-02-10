@@ -21,7 +21,5 @@ html(lang="en")
                 each setting in settings
                     +settingsItem(setting)
             .settings-buttons
-                a(href='../change-avatar/index.html')
-                    +button("Изменить аватар")
-                a(href='../change-password/index.html')
-                    +button("Изменить пароль")
+                +button("Изменить аватар","../change-avatar/index.html")
+                +button("Изменить пароль","../change-password/index.html")

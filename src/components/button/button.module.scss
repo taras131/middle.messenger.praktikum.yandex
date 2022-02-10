@@ -1,20 +1,26 @@
 .button_wrapper {
-    width: 333px;
-    height: 60px;
-    background: #C4C4C4;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
+  width: 333px;
+  height: 60px;
+  background: #C4C4C4;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
 }
-.button_title{
-    font-weight: 600;
-    font-size: 18px;
-    cursor: pointer;
-    text-decoration: none;
+
+.button_title {
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
 }
-.button_green{
-    background-color: #00AA55;
-    color: #FFFFFF;
+
+.button_green {
+  background-color: #00AA55;
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
 }

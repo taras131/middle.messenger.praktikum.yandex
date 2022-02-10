@@ -11,6 +11,7 @@
 # production
 /build
 /dist
+/docs
 
 # misc
 .DS_Store
@@ -26,3 +27,6 @@ yarn-error.log*
 # IntellijIdea files
 *.iml
 .idea
+
+/.cache
+

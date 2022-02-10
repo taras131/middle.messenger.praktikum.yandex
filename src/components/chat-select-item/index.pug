@@ -3,11 +3,11 @@ style
     include chat-select-item.module.scss
 mixin chatSelectItem(chat)
     -let mod = ''
-    -if(chat.isActive) mod = 'active'
+    -if(chat.isActive) mod = "active"
     li(class = "chat_select_item_wrapper "+ mod)
         section.chat_select_item_wrapper_photo
             .photo_container
-                img(class="chat-select-item_img" src=chat.url alt='avatar')
+                img(class="chat-select-item_img" src=chat.url alt="avatar")
         section.chat_select_item_wrapper_info
             .name_time
                 h3=chat.name
@@ -18,4 +18,4 @@ mixin chatSelectItem(chat)
                     if(!mod && chat.newMessageCount)
                         .new_message=chat.newMessageCount
                     if(mod)
-                        img(src='images/delete.png')
+                        img(src="images/delete.png")
