@@ -15,6 +15,7 @@
 /build
 /dist
 /docs
+*.html
 
 # misc
 .DS_Store
