@@ -1,0 +1,149 @@
+include components/button/index
+include components/chat-select-item/index
+include components/chat-header/index
+include components/chat-message-item/index
+
+
+<!DOCTYPE html>
+-
+    const messages = [{id: 1, author: 'arnold', text: 'sdsdgsdg', time: '11:20', isRead: true},
+        {id: 2, author: 'arnold', text: 'sdgsdsahshd', time: '11:20', isRead: true},
+        {id: 3, author: 'i', text: 'sdagsdgsdh sdhgsdh s  sdfhsh', time: '11:20', isRead: true},
+        {id: 4, author: 'arnold', text: 'sdgas sdg s sa sdgsdg', time: '11:20', isRead: true},
+        {id: 5, author: 'arnold', text: 'sdgsadg sdgs sdgsd sdg ', time: '11:20', isRead: true},
+        {id: 6, author: 'i', text: 'sadgs sdgsdg sgsag sdgsdga', time: '11:20', isRead: false}]
+-
+    const chats = [{
+        id: 1,
+        name: 'Oleg',
+        lastMessage: 'Нам срочно нужно встретиться у меня есть сенсационная идей',
+        newMessageCount: 3,
+        isActive: false,
+        url: 'https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=912&q=80'
+    },
+        {
+            id: 2,
+            name: 'Petr',
+            lastMessage: 'Привет как дела',
+            newMessageCount: 1,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1608889825205-eebdb9fc5806?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80'
+        },
+        {
+            id: 3,
+            name: 'Arnold',
+            lastMessage: 'чё как',
+            newMessageCount: 3,
+            isActive: true,
+            url: 'https://images.unsplash.com/photo-1613679074971-91fc27180061?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
+        },
+        {
+            id: 4,
+            name: 'Anna',
+            lastMessage: 'позвони мне',
+            newMessageCount: 3,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1608889175123-8ee362201f81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80'
+        },
+        {
+            id: 5,
+            name: 'Nikolai',
+            lastMessage: 'когда сдашь работу',
+            newMessageCount: 3,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1620510625142-b45cbb784397?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80'
+        },
+        {
+            id: 6,
+            name: 'Alex',
+            lastMessage: 'Привет как дела',
+            newMessageCount: 3,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1631882456892-54a30e92fe4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=852&q=80'
+        },
+        {
+            id: 7,
+            name: 'Lena',
+            lastMessage: 'чё как',
+            newMessageCount: 3,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1631913290783-490324506193?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'
+        },
+        {
+            id: 8,
+            name: 'Negoday',
+            lastMessage: 'позвони мне',
+            newMessageCount: 0,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1630841539293-bd20634c5d72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80'
+        },
+        {
+            id: 9,
+            name: 'Max',
+            lastMessage: 'когда сдашь работу',
+            newMessageCount: 3,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1625426193702-15200f5c008f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
+        },
+        {
+            id: 10,
+            name: 'Mihael',
+            lastMessage: 'Привет как дела',
+            newMessageCount: 3,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1546778316-dfda79f1c84e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'
+        },
+        {
+            id: 11,
+            name: 'Sofia',
+            lastMessage: 'чё как',
+            newMessageCount: 6,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1546753051-f9cbab09c91b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'
+        },
+        {
+            id: 12,
+            name: 'Andre',
+            lastMessage: 'позвони мне',
+            newMessageCount: 0,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1598090216740-eb040d8c3f82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=728&q=80'
+        },
+        {
+            id: 13,
+            name: 'Filip',
+            lastMessage: 'когда сдашь работу',
+            newMessageCount: 3,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1636041293723-abceb81bffbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80'
+        },
+        {
+            id: 14,
+            name: 'XXXX',
+            lastMessage: 'перешли это сообщение десяти человекам иначе тебя ждут несчастья',
+            newMessageCount: 9,
+            isActive: false,
+            url: 'https://images.unsplash.com/photo-1641894252843-9794796577be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80'
+        }]
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="./styles/main.scss")
+        title Document
+    body
+        .wrapper
+            .content_wrapper
+                section.navigation
+                    nav.nav
+                        ul.chat_select_list
+                            each chat in chats
+                                +chatSelectItem(chat)
+                    include components/navigation-foter/index
+                section.chat
+                    +chatHeader('Arnold','Nilolaev', 'images/arnold.png')
+                    ul.chat_content
+                        each message in messages
+                            +chatMessageItem(message)
+                    include components/chat-send-message/index

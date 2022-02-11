@@ -1,0 +1,66 @@
+@import "normalize";
+@import "variables";
+
+body {
+  font-size: 10px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.content_wrapper {
+  font-size: 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+  padding: 5px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav {
+  flex: 1 0;
+}
+
+.chat_select_list {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  gap: 3px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 5px;
+}
+
+.chat_select_list::-webkit-scrollbar {
+  width: 8px;
+  background: antiquewhite;
+}
+
+.chat_select_list::-webkit-scrollbar-thumb {
+  height: 492px;
+  background: $primaryColor;
+}
+
+.chat {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat_content {
+  width: 100%;
+  list-style: none;
+  padding: 5px;
+  flex: 1 0;
+}

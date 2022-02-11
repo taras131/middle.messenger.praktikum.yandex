@@ -1,0 +1,15 @@
+style
+    include chat-message-item.module.scss
+
+mixin chatMessageItem(message)
+    -let mod = ""
+    -if(message.author === "i")
+        -mod = "my_message"
+    li(class = "chat_message_item_wrapper "+ mod)
+            p.time=message.time
+            p.text=message.text
+            .read_icon_container
+                -if(mod && message.isRead)
+                    img(src="images/read.png" alt= "message")
+                -if (mod && !message.isRead)
+                    img(src="images/not_read.png" alt= "message")

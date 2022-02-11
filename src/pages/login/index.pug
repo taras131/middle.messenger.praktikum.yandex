@@ -1,0 +1,16 @@
+include ../../components/button/index
+
+doctype html
+html(lang="en")
+    head
+        title pageTitle
+        style
+            include login.module.scss
+    body
+        .login_wrapper
+            .login_content
+                h1.login-title Вход
+                input(name="login" class="login_input" placeholder="Логин")
+                input(name="password" class="login_input" placeholder="Пароль" type="password")
+                +button("Войти", '/', 'button_green')
+                +button("Создать аккаунт", "../registration/index")

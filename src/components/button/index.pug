@@ -1,0 +1,8 @@
+style
+    include button.module.scss
+- let buttonClassName = "button_wrapper"
+mixin button(title, path, color)
+    -if (color)
+            buttonClassName += ' '+color
+    button(onclick="document.location=" + path class = buttonClassName)
+        p.button_title=title

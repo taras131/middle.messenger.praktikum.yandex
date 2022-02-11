@@ -1,0 +1,20 @@
+include ../../components/settings-item/index
+include ../../components/button/index
+include ../../components/settings-header/index
+-
+    const settings = [{id: 1, name: 'oldPassword', title: 'Старый пароль', value: '11111'},
+        {id: 2, name: 'newPassword', title: 'Новый Пароль', value: ''},
+        {id: 3, name: 'repetitionOldPassword', title: 'Повторите', value: ''}]
+
+doctype html
+html(lang="en")
+    head
+        title pageTitle
+        style
+            include ../settings/settings.module.scss
+    body
+        .settings_content
+            +settingsHeader("Смена пароля","../settings/index")
+            ul.settings-items
+                each setting in settings
+                    +settingsItem(setting)

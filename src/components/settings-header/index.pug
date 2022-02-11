@@ -1,0 +1,9 @@
+style
+    include settings-header.module.scss
+mixin settingsHeader(title, path)
+    .settings-header
+        a(href=path)
+            img(src="../../images/back.png" alt="back")
+        h2=title
+        a(href=path)
+            img(src="../../images/save.png" alt="back")
